@@ -1,9 +1,9 @@
-# VasherMade Converter
+# Converter
 
 A fast, no-nonsense inches ↔ millimeters converter for iPhone and iPad.
 
 <p align="center">
-  <img src="docs/images/converter.png" alt="VasherMade Converter in dark mode showing 1 inch converted to 25.4 mm, with icon tabs for Convert, Saved, and Settings" width="320">
+  <img src="docs/images/converter.png" alt="Converter in dark mode showing 1 inch converted to 25.4 mm, with icon tabs for Convert, Saved, and Settings" width="320">
 </p>
 
 **Free and open source** under the [MIT License](LICENSE). No ads, no accounts, no tracking. Your saved conversions stay on your device.
@@ -48,21 +48,21 @@ Choose **one** of these options:
 
 1. At the top of this GitHub page, click the green **Code** button.
 2. Click **Download ZIP**.
-3. Open your **Downloads** folder and double-click `VasherMade-Converter-main.zip` to unzip it.
-4. Move the unzipped `VasherMade-Converter-main` folder somewhere you'll remember, like your **Documents** folder.
+3. Open your **Downloads** folder and double-click `Converter-main.zip` to unzip it.
+4. Move the unzipped `Converter-main` folder somewhere you'll remember, like your **Documents** folder.
 
 **Option B: Clone with Git**
 
 Open **Terminal** and run:
 
 ```bash
-git clone https://github.com/wesvasher/VasherMade-Converter.git
+git clone https://github.com/wesvasher/Converter.git
 ```
 
 ### Step 3: Open the project in Xcode
 
 1. Open the folder you downloaded.
-2. Double-click **`VasherMade-Converter.xcodeproj`**. Xcode opens the project.
+2. Double-click **`Converter.xcodeproj`**. Xcode opens the project.
 3. If macOS warns that the project was downloaded from the internet, click **Open**.
 
 ### Step 4: Add your Apple Account to Xcode
@@ -77,8 +77,8 @@ git clone https://github.com/wesvasher/VasherMade-Converter.git
 
 Every iPhone app has to be "signed" by a developer before it will run. You'll sign it with your own Personal Team.
 
-1. In Xcode's left sidebar (the Project navigator), click the blue **VasherMade-Converter** project icon at the very top.
-2. In the middle panel, under **TARGETS**, select **VasherMade-Converter**.
+1. In Xcode's left sidebar (the Project navigator), click the blue **Converter** project icon at the very top.
+2. In the middle panel, under **TARGETS**, select **Converter**.
 3. Click the **Signing & Capabilities** tab.
 4. Make sure **Automatically manage signing** is checked.
 5. Click the **Team** dropdown and choose **Your Name (Personal Team)**.
@@ -138,7 +138,7 @@ You can run the app in the iOS Simulator right on your Mac:
 
 | Problem | Fix |
 | --- | --- |
-| *"Signing for VasherMade-Converter requires a development team"* | Do Step 5: pick your Personal Team under **Signing & Capabilities**. |
+| *"Signing for Converter requires a development team"* | Do Step 5: pick your Personal Team under **Signing & Capabilities**. |
 | *"Failed to register bundle identifier"* | Change the **Bundle Identifier** to something more unique (Step 5.6). |
 | *"The iPhone's iOS version is lower than the deployment target"* | Update your iPhone to iOS 26.2 or later in **Settings → General → Software Update**. |
 | Your iPhone doesn't appear in Xcode | Unlock the phone, tap **Trust** when prompted, try a different cable or port, and make sure **Developer Mode** is on. |
@@ -147,7 +147,7 @@ You can run the app in the iOS Simulator right on your Mac:
 
 ## Contributing
 
-Bug reports, ideas, and pull requests are welcome. Open an [issue](https://github.com/wesvasher/VasherMade-Converter/issues) or fork the repo and send a pull request.
+Bug reports, ideas, and pull requests are welcome. Open an [issue](https://github.com/wesvasher/Converter/issues) or fork the repo and send a pull request.
 
 ## License
 
@@ -155,4 +155,4 @@ Released under the [MIT License](LICENSE). You're free to use, copy, modify, and
 
 ---
 
-Made by Wes Vasher · **VasherMade**
+Made by Wes Vasher
