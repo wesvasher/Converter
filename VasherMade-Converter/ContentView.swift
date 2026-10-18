@@ -6,7 +6,6 @@ import Combine
 extension Color {
     static let electricBlue = Color(hex: "006FFF")
     static let customOrange = Color(hex: "FF8C00")
-    static let activeTabGray = Color(hex: "7F7F7F")
 
     static func dynamicAccent(for scheme: ColorScheme) -> Color {
         return scheme == .dark ? .customOrange : .electricBlue
@@ -149,10 +148,16 @@ struct CustomTabBar: View {
                         .background {
                             if selection == index {
                                 // UPDATED: Changed to Capsule for full rounding
-                                Capsule()
-                                    .fill(colorScheme == .dark ? Color.activeTabGray : Color.white)
-                                    .shadow(color: .black.opacity(0.1), radius: 2, y: 1)
-                                    .matchedGeometryEffect(id: "tab", in: tabAnimation)
+                                Group {
+                                    if colorScheme == .dark {
+                                        Capsule().strokeBorder(Color.white, lineWidth: 1.5)
+                                    } else {
+                                        Capsule()
+                                            .fill(Color.white)
+                                            .shadow(color: .black.opacity(0.1), radius: 2, y: 1)
+                                    }
+                                }
+                                .matchedGeometryEffect(id: "tab", in: tabAnimation)
                             }
                         }
                         .foregroundColor(
