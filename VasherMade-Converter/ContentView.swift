@@ -110,6 +110,10 @@ class ConversionManager {
 }
 
 // MARK: - Custom Tab Component
+extension Animation {
+    static let tabSwitch = Animation.spring(response: 0.2, dampingFraction: 0.85)
+}
+
 struct TabItem {
     let icon: String
     let title: String
@@ -125,7 +129,7 @@ struct CustomTabBar: View {
         HStack(spacing: 0) {
             ForEach(0..<items.count, id: \.self) { index in
                 Button {
-                    selection = index
+                    withAnimation(.tabSwitch) { selection = index }
                     triggerFeedback()
                 } label: {
                     Image(systemName: items[index].icon)
@@ -150,7 +154,7 @@ struct CustomTabBar: View {
                                 // UPDATED: Changed to Capsule for full rounding
                                 Group {
                                     if colorScheme == .dark {
-                                        Capsule().strokeBorder(Color.white, lineWidth: 1.5)
+                                        Capsule().strokeBorder(Color.white, lineWidth: 2.25)
                                     } else {
                                         Capsule()
                                             .fill(Color.white)
@@ -208,7 +212,7 @@ struct ContentView: View {
                 default: SettingsView(manager: manager).transition(.move(edge: .trailing).combined(with: .opacity))
                 }
             }
-            .animation(.spring(response: 0.3, dampingFraction: 0.8), value: selectedTab)
+            .animation(.tabSwitch, value: selectedTab)
             
             Spacer(minLength: 0)
         }
