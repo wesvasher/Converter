@@ -3,7 +3,7 @@
 A fast, no-nonsense inches ↔ millimeters converter for iPhone and iPad.
 
 <p align="center">
-  <img src="docs/images/converter.png" alt="VasherMade Converter showing 12 inches converted to 304.8 mm in dark mode" width="700">
+  <img src="docs/images/converter.png" alt="VasherMade Converter in dark mode showing 1 inch converted to 25.4 mm, with icon tabs for Convert, Saved, and Settings" width="320">
 </p>
 
 **Free and open source** under the [MIT License](LICENSE). No ads, no accounts, no tracking. Your saved conversions stay on your device.
