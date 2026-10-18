@@ -1,6 +1,6 @@
 //
 //  VasherMadeConverterApp.swift
-//  VasherMadeConverter
+//  VasherMade-Converter
 //
 //  Created by Wesley Vasher on 3/9/26.
 //
