@@ -7,7 +7,6 @@ extension Color {
     static let electricBlue = Color(hex: "006FFF")
     static let customOrange = Color(hex: "FF8C00")
     static let activeTabGray = Color(hex: "7F7F7F")
-    static let activeTabText = Color(hex: "1E1F1F")
 
     static func dynamicAccent(for scheme: ColorScheme) -> Color {
         return scheme == .dark ? .customOrange : .electricBlue
@@ -115,6 +114,7 @@ class ConversionManager {
 struct TabItem {
     let icon: String
     let title: String
+    var badge: Int = 0
 }
 
 struct CustomTabBar: View {
@@ -132,6 +132,18 @@ struct CustomTabBar: View {
                     Image(systemName: items[index].icon)
                         .symbolVariant(selection == index ? .fill : .none)
                         .font(.system(size: 18, weight: .bold))
+                        .overlay(alignment: .topTrailing) {
+                            if items[index].badge > 0 {
+                                Text("\(items[index].badge)")
+                                    .font(.system(size: 11, weight: .bold))
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal, 5)
+                                    .frame(minWidth: 18, minHeight: 18)
+                                    .background(Capsule().fill(Color.red))
+                                    .fixedSize()
+                                    .offset(x: 14, y: -8)
+                            }
+                        }
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 10)
                         .background {
@@ -145,11 +157,12 @@ struct CustomTabBar: View {
                         }
                         .foregroundColor(
                             selection == index ?
-                            (colorScheme == .dark ? .activeTabText : .black) :
+                            (colorScheme == .dark ? .white : .black) :
                             .gray
                         )
                 }
                 .accessibilityLabel(items[index].title)
+                .accessibilityValue(items[index].badge > 0 ? "\(items[index].badge)" : "")
                 .accessibilityAddTraits(selection == index ? .isSelected : [])
             }
         }
@@ -175,7 +188,7 @@ struct ContentView: View {
             VStack {
                 CustomTabBar(selection: $selectedTab, items: [
                     TabItem(icon: "arrow.left.arrow.right", title: "Convert"),
-                    TabItem(icon: "bookmark", title: "Saved"),
+                    TabItem(icon: "bookmark", title: "Saved", badge: manager.history.count),
                     TabItem(icon: "gearshape", title: "Settings")
                 ])
             }
