@@ -18,7 +18,7 @@ Converter is built for the shop, the job site, or anywhere you're jumping betwee
 - **Saved conversions:** tap **Save** to keep a conversion. The **Saved** tab (bookmark icon) lists them with the nearest fractional inch (to 1/64″). Swipe to delete one, or clear them all. They're kept between launches.
 - **Common conversions:** the **Settings** tab (gear icon) has a quick-reference list of everyday sizes (1″, 3/4″, 1/2″, 1/4″, 1/8″, 1/16″).
 - **Light, Dark, or System theme:** pick an appearance in **Settings**. The accent color is blue in light mode and orange in dark mode.
-- **Big, easy keypad:** a built-in number pad with large keys and haptic feedback on every tap.
+- **Big, easy keypad:** a built-in number pad with large keys, haptic feedback, and a click sound on every tap. You can turn the sound off in **Settings**.
 
 ## Requirements
 

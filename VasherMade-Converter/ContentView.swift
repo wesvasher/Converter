@@ -503,6 +503,8 @@ struct SavedView: View {
 // MARK: - Settings View
 struct SettingsView: View {
     @Bindable var manager: ConversionManager
+    @AppStorage(SoundManager.enabledKey) private var soundEnabled = true
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         List {
             Section("Appearance") {
@@ -514,7 +516,12 @@ struct SettingsView: View {
                 .pickerStyle(.segmented)
                 .padding(.vertical, 4)
             }
-            
+
+            Section("Sound") {
+                Toggle("Sound Effects", isOn: $soundEnabled)
+                    .tint(Color.dynamicAccent(for: colorScheme))
+            }
+
             Section("Common Conversions") {
                 ForEach(manager.commonConversions) { item in
                     ConversionRow(item: item)
@@ -610,8 +617,10 @@ func triggerFeedback() {
 
 class SoundManager {
     static let instance = SoundManager()
+    static let enabledKey = "SoundEnabled"
     var player: AVAudioPlayer?
     func playSound() {
+        guard UserDefaults.standard.object(forKey: Self.enabledKey) as? Bool ?? true else { return }
         guard let url = Bundle.main.url(forResource: "click", withExtension: "m4a") else { return }
         try? player = AVAudioPlayer(contentsOf: url)
         player?.play()
