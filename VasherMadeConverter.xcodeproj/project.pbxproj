@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		801299722F5F0A7B0078E167 /* Convert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Convert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		801299722F5F0A7B0078E167 /* VasherMadeConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VasherMadeConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		801299742F5F0A7B0078E167 /* Convert */ = {
+		801299742F5F0A7B0078E167 /* VasherMadeConverter */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Convert;
+			path = VasherMadeConverter;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		801299692F5F0A7B0078E167 = {
 			isa = PBXGroup;
 			children = (
-				801299742F5F0A7B0078E167 /* Convert */,
+				801299742F5F0A7B0078E167 /* VasherMadeConverter */,
 				801299732F5F0A7B0078E167 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		801299732F5F0A7B0078E167 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				801299722F5F0A7B0078E167 /* Convert.app */,
+				801299722F5F0A7B0078E167 /* VasherMadeConverter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		801299712F5F0A7B0078E167 /* Convert */ = {
+		801299712F5F0A7B0078E167 /* VasherMadeConverter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8012997D2F5F0A7B0078E167 /* Build configuration list for PBXNativeTarget "Convert" */;
+			buildConfigurationList = 8012997D2F5F0A7B0078E167 /* Build configuration list for PBXNativeTarget "VasherMadeConverter" */;
 			buildPhases = (
 				8012996E2F5F0A7B0078E167 /* Sources */,
 				8012996F2F5F0A7B0078E167 /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				801299742F5F0A7B0078E167 /* Convert */,
+				801299742F5F0A7B0078E167 /* VasherMadeConverter */,
 			);
-			name = Convert;
+			name = VasherMadeConverter;
 			packageProductDependencies = (
 			);
-			productName = Convert;
-			productReference = 801299722F5F0A7B0078E167 /* Convert.app */;
+			productName = VasherMadeConverter;
+			productReference = 801299722F5F0A7B0078E167 /* VasherMadeConverter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8012996D2F5F0A7B0078E167 /* Build configuration list for PBXProject "Convert" */;
+			buildConfigurationList = 8012996D2F5F0A7B0078E167 /* Build configuration list for PBXProject "VasherMadeConverter" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				801299712F5F0A7B0078E167 /* Convert */,
+				801299712F5F0A7B0078E167 /* VasherMadeConverter */,
 			);
 		};
 /* End PBXProject section */
@@ -266,7 +266,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = vasher.Convert;
+				PRODUCT_BUNDLE_IDENTIFIER = vasher.VasherMadeConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -298,7 +298,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = vasher.Convert;
+				PRODUCT_BUNDLE_IDENTIFIER = vasher.VasherMadeConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -313,7 +313,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8012996D2F5F0A7B0078E167 /* Build configuration list for PBXProject "Convert" */ = {
+		8012996D2F5F0A7B0078E167 /* Build configuration list for PBXProject "VasherMadeConverter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8012997B2F5F0A7B0078E167 /* Debug */,
@@ -322,7 +322,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8012997D2F5F0A7B0078E167 /* Build configuration list for PBXNativeTarget "Convert" */ = {
+		8012997D2F5F0A7B0078E167 /* Build configuration list for PBXNativeTarget "VasherMadeConverter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8012997E2F5F0A7B0078E167 /* Debug */,
