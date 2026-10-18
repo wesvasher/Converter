@@ -15,9 +15,9 @@ Converter is built for the shop, the job site, or anywhere you're jumping betwee
 - **Convert both ways:** type in the **Inches** box to get millimeters, or tap the **MM** box and type to get inches. Results update as you type, with up to 8 decimal places.
 - **Fractions, feet, and yards:** tap **Fraction**, **Feet**, or **Yards** to enter a measurement like `5/16`, `3 ft`, or `2 yd`. It's converted to inches and millimeters for you.
 - **One-tap copy:** a **Copy** button next to each value puts it on the clipboard, ready to paste into another app.
-- **Saved conversions:** tap **Save** to keep a conversion. The **Saved** tab lists them with the nearest fractional inch (to 1/64″). Swipe to delete one, or clear them all. They're kept between launches.
-- **Common conversions:** the **More** tab has a quick-reference list of everyday sizes (1″, 3/4″, 1/2″, 1/4″, 1/8″, 1/16″).
-- **Light, Dark, or System theme:** pick an appearance in **More**. The accent color is blue in light mode and orange in dark mode.
+- **Saved conversions:** tap **Save** to keep a conversion. The **Saved** tab (bookmark icon) lists them with the nearest fractional inch (to 1/64″). Swipe to delete one, or clear them all. They're kept between launches.
+- **Common conversions:** the **Settings** tab (gear icon) has a quick-reference list of everyday sizes (1″, 3/4″, 1/2″, 1/4″, 1/8″, 1/16″).
+- **Light, Dark, or System theme:** pick an appearance in **Settings**. The accent color is blue in light mode and orange in dark mode.
 - **Big, easy keypad:** a built-in number pad with large keys and haptic feedback on every tap.
 
 ## Requirements

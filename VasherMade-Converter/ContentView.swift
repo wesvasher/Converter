@@ -112,11 +112,16 @@ class ConversionManager {
 }
 
 // MARK: - Custom Tab Component
+struct TabItem {
+    let icon: String
+    let title: String
+}
+
 struct CustomTabBar: View {
     @Binding var selection: Int
     @Environment(\.colorScheme) var colorScheme
-    let items: [String]
-    
+    let items: [TabItem]
+
     var body: some View {
         HStack(spacing: 0) {
             ForEach(0..<items.count, id: \.self) { index in
@@ -124,8 +129,9 @@ struct CustomTabBar: View {
                     selection = index
                     triggerFeedback()
                 } label: {
-                    Text(items[index])
-                        .font(.system(size: 15, weight: .bold))
+                    Image(systemName: items[index].icon)
+                        .symbolVariant(selection == index ? .fill : .none)
+                        .font(.system(size: 18, weight: .bold))
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 10)
                         .background {
@@ -143,6 +149,8 @@ struct CustomTabBar: View {
                             .gray
                         )
                 }
+                .accessibilityLabel(items[index].title)
+                .accessibilityAddTraits(selection == index ? .isSelected : [])
             }
         }
         .padding(4)
@@ -165,7 +173,11 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 0) {
             VStack {
-                CustomTabBar(selection: $selectedTab, items: ["Convert", "Saved (\(manager.history.count))", "More"])
+                CustomTabBar(selection: $selectedTab, items: [
+                    TabItem(icon: "arrow.left.arrow.right", title: "Convert"),
+                    TabItem(icon: "bookmark", title: "Saved"),
+                    TabItem(icon: "gearshape", title: "Settings")
+                ])
             }
             .background(.ultraThinMaterial)
             
